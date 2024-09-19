@@ -1,0 +1,31 @@
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  padding: 20px;
+  min-height: 100vh; /* Ajusta según el contenido */
+}
+
+#skills h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem; /* Ajusta según tu diseño */
+  color: #333;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill-image {
+  width: 80px; /* Ajusta el tamaño según tus necesidades */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+  border-radius: 12px;
+  border: 2px solid #000000;
+}

@@ -1,0 +1,21 @@
+.contact {
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-logos img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.contact-logos img:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,39 @@
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+  padding: 20px;
+  min-height: 100vh; /* Ajusta según el contenido */
+}
+
+.aboutme h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem; /* Ajusta según tu diseño */
+  color: #333;
+}
+
+.aboutme-content {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
