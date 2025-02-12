@@ -1,6 +1,6 @@
 export const createHeader = () => {
   const header = document.createElement('header')
-  header.classList.add('header') // Añadir clase 'header'
+  header.id = 'header' // Usamos id en lugar de class para coincidir con el CSS
 
   // Crear el título
   const title = document.createElement('h1')

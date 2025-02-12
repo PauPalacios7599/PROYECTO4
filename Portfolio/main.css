@@ -1,6 +1,3 @@
-/* MainCSS */
-
-/* Reset de márgenes y paddings */
 * {
   margin: 0;
   padding: 0;
@@ -18,15 +15,21 @@ body {
 
 /* Estilos del header */
 #header {
-  background-color: #333;
+  background-color: #ebc964;
   color: #fff;
   padding: 30px 0;
   text-align: center;
-  position: fixed; /* Fija el header en la parte superior */
-  width: 100%; /* Asegura que el header cubra todo el ancho */
-  top: 0; /* Posición en la parte superior */
-  left: 0; /* Alineación a la izquierda */
-  z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover: cambia el color de fondo cuando pasas el cursor */
+#header:hover {
+  background-color: #6ec1e4; /* Color más claro al hacer hover */
 }
 
 #header h1 {
@@ -47,8 +50,7 @@ body {
 /* Estilos generales de las secciones */
 section {
   padding: 20px;
-  margin-top: 70px; /* Ajusta el espacio superior para evitar solapamiento con el header fijo */
-  /* Asegura que las secciones no estén ocultas detrás del header */
+  margin-top: 70px;
 }
 
 /* Estilos específicos para la sección de habilidades */
@@ -58,13 +60,13 @@ section {
   align-items: center;
   justify-content: center;
   background: #f4f4f4;
-  min-height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana si es necesario */
+  min-height: 100vh;
 }
 
 #skills h2 {
   margin: 0;
   text-align: center;
-  font-size: 2rem; /* Ajusta según tu diseño */
+  font-size: 2rem;
   color: #333;
 }
 
@@ -76,9 +78,9 @@ section {
 }
 
 .skill-image {
-  width: 80px; /* Ajusta el tamaño según tus necesidades */
-  height: auto; /* Mantiene la proporción original */
-  object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
-  border-radius: 12px; /* Radio del borde redondeado */
-  border: 2px solid #000000; /* Grosor y color del borde */
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #000000;
 }
