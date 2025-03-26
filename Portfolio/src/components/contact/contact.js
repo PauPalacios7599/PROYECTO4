@@ -7,16 +7,13 @@ export const createContactSection = () => {
   section.id = 'contact'
   section.classList.add('contact')
 
-  // Crear el título de la sección
   const title = document.createElement('h2')
   title.textContent = 'Contacto'
   section.appendChild(title)
 
-  // Crear el contenedor de logos de contacto
   const contactLogos = document.createElement('div')
   contactLogos.classList.add('contact-logos')
 
-  // Lista de contactos con imágenes importadas
   const contacts = [
     {
       href: 'mailto:paupalacios.euclides@gmail.com',
@@ -35,7 +32,6 @@ export const createContactSection = () => {
     }
   ]
 
-  // Crear los elementos <a> con sus imágenes
   contacts.forEach(({ href, img, alt }) => {
     const link = document.createElement('a')
     link.href = href
@@ -50,7 +46,6 @@ export const createContactSection = () => {
     contactLogos.appendChild(link)
   })
 
-  // Agregar los logos al section
   section.appendChild(contactLogos)
 
   return section

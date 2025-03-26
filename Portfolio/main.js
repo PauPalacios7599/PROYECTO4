@@ -5,9 +5,15 @@ import { createAboutMeSection } from './src/components/aboutme/aboutme.js'
 import { createContactSection } from './src/components/contact/contact.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.body.appendChild(createHeader())
-  document.body.appendChild(createProjectsSection())
-  document.body.appendChild(createSkillsSection())
-  document.body.appendChild(createAboutMeSection())
-  document.body.appendChild(createContactSection())
+  const headerContainer = document.getElementById('header')
+  if (headerContainer) {
+    headerContainer.replaceWith(createHeader())
+  } else {
+    document.body.prepend(createHeader())
+  }
+
+  document.getElementById('projects').appendChild(createProjectsSection())
+  document.getElementById('skills').appendChild(createSkillsSection())
+  document.getElementById('aboutme').appendChild(createAboutMeSection())
+  document.getElementById('contact').appendChild(createContactSection())
 })
