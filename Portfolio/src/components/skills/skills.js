@@ -29,3 +29,4 @@ export const createSkillsSection = () => {
 
   return section
 }
+export default createSkillsSection

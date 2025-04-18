@@ -1,43 +1,51 @@
-const aboutMeContent = {
-  experiencia:
-    'La experiencia que tengo ahora mismo es la de los proyectos que se pueden ver arriba. No hay mucha pero la hay.',
-  educacion: 'Actualmente me estoy formando en ThePowerEducation.'
-}
+import yoImage from '../../assets/images/yo.jpg'
+import htmlLogo from '../../assets/images/html.png'
+import cssLogo from '../../assets/images/css.png'
+import jsLogo from '../../assets/images/js.png'
+import reactLogo from '../../assets/images/react.png'
+import nodeLogo from '../../assets/images/node.png'
 
-export const createAboutMeSection = () => {
+const createAboutMeSection = () => {
   const section = document.createElement('section')
   section.id = 'aboutme'
-  section.innerHTML = `
-    <h2>SOBRE MÍ</h2>
-    <div id="aboutme-content" class="aboutme-content">
-      <!-- Contenido dinámico añadido aquí -->
-    </div>
-  `
   section.classList.add('aboutme')
 
-  const aboutMeContainer = section.querySelector('#aboutme-content')
-  const createCard = (title, content) => {
-    const cardDiv = document.createElement('div')
-    cardDiv.classList.add('card')
+  section.innerHTML = `
+    <h2>SOBRE MÍ</h2>
+    <div class="aboutme-container">
+      <div class="aboutme-text">
+        <p class="quote">"Transformando ideas en soluciones funcionales."</p>
+        <p>
+          Soy Pau Palacios, desarrollador web apasionado por crear experiencias digitales útiles, limpias y funcionales.
+          Actualmente me estoy formando como desarrollador Full Stack en ThePower Education y estoy enfocado en
+          tecnologías como JavaScript, React, HTML y CSS. 
+        </p>
+        <p>
+          Vengo del mundo de la electricidad, donde he desarrollado una mentalidad lógica y resolutiva que ahora aplico
+          al desarrollo web. Me encanta aprender, mejorar y buscar formas eficientes de resolver problemas.
+        </p>
 
-    const cardTitle = document.createElement('h3')
-    cardTitle.textContent = title
+        <div class="tech-stack">
+          <h3>Tecnologías que uso:</h3>
+          <ul class="tech-logos">
+            <li><img src="${htmlLogo}" alt="HTML5" title="HTML5" /></li>
+            <li><img src="${cssLogo}" alt="CSS3" title="CSS3" /></li>
+            <li><img src="${jsLogo}" alt="JavaScript" title="JavaScript" /></li>
+            <li><img src="${reactLogo}" alt="React" title="React" /></li>
+            <li><img src="${nodeLogo}" alt="Node" title="Node" /></li>
+          </ul>
+        </div>
 
-    const cardContent = document.createElement('p')
-    cardContent.textContent = content
+        <button class="see-projects-btn" data-page="projects">Ver mis proyectos →</button>
+      </div>
 
-    cardDiv.appendChild(cardTitle)
-    cardDiv.appendChild(cardContent)
-
-    return cardDiv
-  }
-
-  aboutMeContainer.appendChild(
-    createCard('Experiencia', aboutMeContent.experiencia)
-  )
-  aboutMeContainer.appendChild(
-    createCard('Educación', aboutMeContent.educacion)
-  )
+      <div class="aboutme-image">
+        <img src="${yoImage}" alt="Foto de Pau Palacios" />
+      </div>
+    </div>
+  `
 
   return section
 }
+
+export default createAboutMeSection

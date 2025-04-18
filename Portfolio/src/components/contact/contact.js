@@ -50,3 +50,4 @@ export const createContactSection = () => {
 
   return section
 }
+export default createContactSection

@@ -59,3 +59,4 @@ export const createProjectsSection = () => {
   section.classList.add('projects')
   return section
 }
+export default createProjectsSection

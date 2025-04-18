@@ -1,23 +1,20 @@
-export const createHeader = () => {
+const createHeader = () => {
   const header = document.createElement('header')
-  header.id = 'header' // Usamos id en lugar de class para coincidir con el CSS
+  header.classList.add('header')
 
-  // Crear el título
-  const title = document.createElement('h1')
-  title.textContent = 'MI PORTFOLIO'
+  header.innerHTML = `
+    <nav>
+      <ul class="nav-links">
+        <li><button data-page="aboutme" onclick="console.log('click sobre botón sobre mí')">Sobre mí</button></li>
 
-  // Crear el elemento de navegación
-  const nav = document.createElement('nav')
-  nav.innerHTML = `
-    <a href="#projects">Proyectos</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#aboutme">Sobre Mí</a>
-    <a href="#contact">Contacto</a>
+        <li><button class="nav-button" data-page="projects">Proyectos</button></li>
+        <li><button class="nav-button" data-page="experience">Experiencia y formación</button></li>
+        <li><button class="nav-button" data-page="contact">Contacto</button></li>
+      </ul>
+    </nav>
   `
-
-  // Añadir el título y la navegación al header
-  header.appendChild(title)
-  header.appendChild(nav)
 
   return header
 }
+
+export default createHeader
