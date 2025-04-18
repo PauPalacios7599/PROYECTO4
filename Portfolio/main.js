@@ -19,27 +19,6 @@ const main = document.createElement('main')
 main.id = 'main-content'
 app.appendChild(main)
 
-// 🔥 Enganchar evento justo después de añadir el header al DOM
-const nav = header.querySelector('.nav-links')
-console.log('🧪 nav:', nav)
-
-if (nav) {
-  nav.addEventListener('click', (e) => {
-    if (e.target.matches('button[data-page]')) {
-      const page = e.target.dataset.page
-      console.log('✅ CLICK detectado en:', page)
-      loadSection(page)
-
-      nav
-        .querySelectorAll('button')
-        .forEach((btn) => btn.classList.remove('active'))
-      e.target.classList.add('active')
-    }
-  })
-} else {
-  console.warn('❌ .nav-links no encontrado en el header')
-}
-
 // Diccionario de secciones
 const pages = {
   aboutme: createAboutMeSection,
@@ -59,6 +38,23 @@ const loadSection = (key) => {
     main.innerHTML = '<p>Sección no encontrada</p>'
   }
 }
+
+// Evento global para manejar clicks en botones con data-page
+document.addEventListener('click', (e) => {
+  if (e.target.matches('button[data-page]')) {
+    const page = e.target.dataset.page
+    console.log('✅ CLICK detectado en:', page)
+    loadSection(page)
+
+    document
+      .querySelectorAll('.nav-links button')
+      .forEach((btn) => btn.classList.remove('active'))
+
+    if (e.target.closest('.nav-links')) {
+      e.target.classList.add('active')
+    }
+  }
+})
 
 // Carga inicial
 loadSection('aboutme')
