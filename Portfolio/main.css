@@ -14,7 +14,7 @@ body {
 
 /* Estilos del header */
 #header {
-  background-color: #ebc964;
+  background-color: #4a752c;
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -22,15 +22,17 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+  height: 80px;
   z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
-/* Efecto hover: cambia el color de fondo cuando pasas el cursor */
+/* Efecto hover */
 #header:hover {
   background-color: #6ec1e4;
 }
 
+/* Header contenido */
 #header h1 {
   margin: 0;
   font-size: 2rem;
@@ -53,29 +55,18 @@ body {
 
 /* Compensar el header fijo */
 main {
-  padding-top: 80px;
+  padding-top: 100px; /* un poco más que el header */
 }
 
-/* Estilos generales de las secciones */
+/* Estilos generales de secciones */
 section {
   padding: 60px 20px;
+  min-height: calc(100vh - 100px); /* Si quieres forzar mínimo 1 pantalla */
 }
 
-/* Estilos específicos para la sección de habilidades */
+/* Habilidades */
 #skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: #f4f4f4;
-  min-height: 70vh;
-}
-
-#skills h2 {
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
 }
 
 .skills-container {
@@ -90,5 +81,5 @@ section {
   height: auto;
   object-fit: contain;
   border-radius: 12px;
-  border: 2px solid #000000;
+  border: 2px solid #000;
 }

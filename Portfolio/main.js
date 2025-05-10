@@ -2,7 +2,6 @@ import createHeader from './src/components/header/header.js'
 import createProjectsSection from './src/components/projects/projects.js'
 import createSkillsSection from './src/components/skills/skills.js'
 import createAboutMeSection from './src/components/aboutme/aboutme.js'
-import createContactSection from './src/components/contact/contact.js'
 import createExperienceSection from './src/components/experience/experience.js'
 
 console.log('✅ main.js cargado')
@@ -24,7 +23,6 @@ const pages = {
   aboutme: createAboutMeSection,
   projects: createProjectsSection,
   skills: createSkillsSection,
-  contact: createContactSection,
   experience: createExperienceSection
 }
 

@@ -1,9 +1,9 @@
 import yoImage from '../../assets/images/yo.jpg'
-import htmlLogo from '../../assets/images/html.png'
-import cssLogo from '../../assets/images/css.png'
-import jsLogo from '../../assets/images/js.png'
-import reactLogo from '../../assets/images/react.png'
-import nodeLogo from '../../assets/images/node.png'
+import htmlLogo from '../../assets/images/html2.png'
+import cssLogo from '../../assets/images/css2.png'
+import jsLogo from '../../assets/images/js2.png'
+import reactLogo from '../../assets/images/react2.png'
+import nodeLogo from '../../assets/images/nodejs2.jpg'
 
 const createAboutMeSection = () => {
   const section = document.createElement('section')
